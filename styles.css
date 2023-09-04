@@ -1,0 +1,192 @@
+:root {
+  --very-dark-maenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.container {
+  padding: 4.5rem 1.5rem;
+}
+
+.preview {
+  text-align: center;
+}
+
+.preview .header h1 {
+  color: var(--very-dark-maenta);
+  width: 200px;
+  margin: auto;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.preview .header p {
+  color: var(--dark-grayish-magenta);
+  line-height: 1.6;
+  font-weight: 500;
+  margin-top: 1.5rem;
+}
+
+.rating {
+  margin: 2.5rem 0;
+}
+
+.rating .rate {
+  background-color: var(--light-grayish-magenta);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.rating .rate:not(:last-of-type) ,
+.cards .card:not(:last-of-type) {
+  margin-bottom: 1.2rem;
+}
+
+.rating .rate .icons img {
+  display: inline-block;
+  margin-right: 0.1rem;
+  width: 1rem;
+}
+
+.rating .rate > p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--very-dark-maenta);
+  margin-top: 0.5rem;
+}
+
+.cards .card {
+  background-color: var(--very-dark-maenta);
+  padding: 2.2rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.cards .card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.card .card-header .img-container img {
+  width: 2.7rem;
+  /* border: 3px solid var(--soft-pink); */
+  border-radius: 50%;
+}
+
+.card .card-header .name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card .card-header .verified-buyer {
+  color: var(--soft-pink);
+  font-weight: 500;
+  margin-top: 0.4rem;
+}
+
+.card .card-header .name,
+.card .card-body {
+  color: var(--white)
+}
+
+.card .card-body {
+  line-height: 1.6;
+  font-weight: 500;
+  margin-top: 1.7rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 5rem 0;
+    margin: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .container {
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 70%;
+  }
+
+  .preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .preview .header {
+    text-align: left;
+    flex-basis: 35%;
+  }
+
+  .preview .header h1 {
+    width: 350px;
+    margin: 0;
+    font-size: 2.7rem;
+  }
+
+  .preview .rating {
+    flex-basis: 45%;
+    margin: 0
+  }
+
+  .preview .rating .rate {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding-left: 1.5rem;
+  }
+
+  .preview .rating .rate:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+
+  .preview .rating .rate:first-of-type {
+    transform: translateX(-4rem);
+  }
+
+  .preview .rating .rate:nth-child(2) {
+    transform: translateX(-2rem);
+  }
+
+  .preview .rating .rate p {
+    margin: 0;
+  }
+
+  .cards {
+    margin-top: 3rem;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .cards .card {
+    margin: 0 !important;
+  }
+
+  .cards .card:last-of-type {
+    transform: translateY(2rem);
+  }
+
+  .cards .card:nth-child(2) {
+    transform: translateY(1rem);
+  }
+}
+
